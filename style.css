@@ -49,4 +49,87 @@ header {
   .main-content h3 {
     margin: 10px;
   }
+  /*Configuration mobile*/
+@media (max-width: 750px) {
+    .box {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: right;
+      margin-top: 15px;
+      margin-bottom: -20px;
+  
+    }
+  
+    .box .navab {
+      display: none;
+      text-align: right;
+      justify-content: right;
+  
+    }
+  
+  
+    .box .navb li {
+      display: none;
+      list-style: none;
+      margin: 0px;
+    }
+  
+    .logo {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      max-width: 60px;
+  
+    }
+  
+    .logo img {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      max-width: 80px;
+      margin: 20px 0px;
+    }
+  
+    .activite {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+      justify-content: jusitfy;
+      text-align: justify;
+      font-size: 10px;
+    }
+  
+    .sport {
+      width: 25%;
+      color: black;
+      text-align: center;
+      border: solid bleu;
+      margin: 10px;
+      justify-content: jusitfy;
+      font-size: 20px;
+    }
+  
+    .sport img {
+      width: 100px;
+      border-radius: 20%;
+      height: 80%;
+  
+    }
+  
+    .main-content h3 {
+      margin: 10px;
+    }
+  
+    #carouselExampleCaptions {
+      display: none;
+    }
+  
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: #008F8C;
+      width: 100%;
+    }
   
