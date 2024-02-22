@@ -1,0 +1,264 @@
+/*Configuration mobile*/
+@media (max-width: 750px) {
+    .box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: right;
+        margin-top: 15px;
+        margin-bottom: -20px;
+
+    }
+
+    .box .navab {
+        display: none;
+        text-align: right;
+        justify-content: right;
+
+    }
+
+
+    .box .navb li {
+        display: none;
+        list-style: none;
+        margin: 0px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        max-width: 60px;
+
+    }
+
+    .logo img {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        max-width: 80px;
+        margin: 20px 0px;
+    }
+
+    .activite {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        justify-content: jusitfy;
+        text-align: justify;
+        font-size: 10px;
+    }
+
+    .sport {
+        width: 25%;
+        color: black;
+        text-align: center;
+        border: solid bleu;
+        margin: 10px;
+        justify-content: jusitfy;
+        font-size: 20px;
+    }
+
+    .sport img {
+        width: 100px;
+        border-radius: 20%;
+        height: 80%;
+
+    }
+
+    .main-content h3 {
+        margin: 10px;
+    }
+
+    #carouselExampleCaptions {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #008F8C;
+        width: 100%;
+    }
+
+    .gauche {
+        display: none;
+    }
+
+    .droite {
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: centre;
+        text-align: center;
+        border: #008F8C solid;
+        border-radius: 10px;
+        margin: 10px 10px 10px 10px;
+
+    }
+
+    .droite textarea {
+        width: 90%;
+        height: 150px;
+        resize: none;
+
+    }
+
+    .event {
+        width: 100%;
+    }
+
+    .futur {
+        display: flex;
+        flex-direction: column;
+        font-size: 3vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .futur text {
+        text-align: center;
+
+    }
+
+    .futur .imgevenement img {
+        width: 200px;
+        padding: 10px;
+        border-radius: 18%;
+    }
+
+    .carousel slide {
+        height: 400px;
+    }
+
+    .carousel-item :active {
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+/*Configuration desktop et tablette*/
+@media only screen and (min-width: 750px) {
+
+    .box {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+    }
+
+
+    .box .navab {
+        display: flex;
+        text-decoration: none;
+    }
+
+    .box .navab li {
+        list-style: none;
+        justify-content: space-between;
+        padding: 20px;
+
+    }
+
+
+    .logo {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        max-width: 80px;
+
+    }
+
+    .logo img {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        max-width: 80px;
+        margin: 20px 0px;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .activite {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        background-color: #008F8C;
+        width: 100%;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: rox;
+        text-align: center;
+        align-items: center;
+    }
+
+    .gauche {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gauche img {
+        max-width: 80px;
+        text-align: center;
+    }
+
+    .gauche .contact-info li {
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .droite {
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: centre;
+        text-align: center;
+        border: #008F8C solid 1px;
+        border-radius: 10px;
+        margin: 10px 10px 10px 10px;
+
+    }
+
+    .droite textarea {
+        width: 90%;
+        height: 150px;
+        resize: none;
+
+    }
+
+    #carouselExampleCaptions {
+        width: 50%;
+        margin: auto;
+    }
+
+    .carousel-item img {
+        width: 50%;
+        height: auto;
+    }
+
+    .carousel-control-prev {
+        color: transparent;
+    }
+
+}
