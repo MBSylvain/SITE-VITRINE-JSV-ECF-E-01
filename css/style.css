@@ -5,6 +5,12 @@ body {
   font-family: 'Times New Roman', serif sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -42,10 +48,11 @@ header {
 }
 
 .text {
-  margin: 15px;
+  margin: 20px;
   justify-content: jusitfy;
   text-align: justify;
-  font-size: 2vw;
+  font-size: 1.2vw;
+  padding: 20px 20px 20px 20px;
 }
 
 .main-content h3 {
@@ -56,6 +63,12 @@ header {
 
 
 /*Configuration du footer*/
+footer {
+
+  position: absolute;
+  bottom: 0;
+  width: 100%
+}
 
 .footer-contact {
   background-color: #008F8C;
