@@ -47,16 +47,15 @@
         justify-content: jusitfy;
         text-align: justify;
         font-size: 10px;
+        flex-wrap: wrap;
     }
 
     .sport {
-        width: 25%;
-        color: black;
-        text-align: center;
-        border: solid bleu;
-        margin: 10px;
+        width: 20%;
+        margin: 40px;
         justify-content: jusitfy;
         font-size: 20px;
+        padding: 5px 5px;
     }
 
     .sport img {
