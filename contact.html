@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo ECF.JPG" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carouselExampleCaptions">Activités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Événements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plus
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Accueil</a>
+                            <a class="dropdown-item" href="#">Activité</a>
+                            <a class="dropdown-item" href="#">Événements</a>
+                            <a class="dropdown-item" href="#">À propos de nous</a>
+                            <a class="dropdown-item" href="#">Réseaux sociaux</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="text-center m-4">Contactez-nous</h1>
+        <form action="contact.html" method="post">
+            <div class="form-group">
+                <label for="nom">Votre nom</label>
+                <input type="text" class="form-control" id="nom" name="nom" placeholder="Martin" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Votre e-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="monadresse@mail.com"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="sujet">Quel est le sujet de votre message ?</label>
+                <select class="form-control" name="sujet" id="sujet" required></select>
+                <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                <option value="probleme-compte">Activité</option>
+                <option value="question-produit">Adhérer</option>
+                <option value="suivi-commande">Evènements</option>
+                <option value="autre">Autre...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea class="form-control" id="message" name="message"
+                    placeholder="Bonjour, je vous contacte car...." required></textarea>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit">Envoyer mon message</button>
+            </div>
+        </form>
+
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Jeunesse Sport avec sa Ville</h5>
+                    <p>
+                        Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion
+                        pour le
+                        sport.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Liens</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="index.html" class="text-dark">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="#carouselExampleCaptions" class="text-dark">Activités</a>
+                        </li>
+                        <li>
+                            <a href="event.html" class="text-dark">Événements</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-dark">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Plus</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#" class="text-dark">À propos de nous</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-dark">Réseaux sociaux</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Jeunesse Sport avec sa Ville
+        </div>
+    </footer>
+</body>
