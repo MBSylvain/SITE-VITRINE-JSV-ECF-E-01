@@ -51,9 +51,9 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container h-90">
         <h1 class="text-center m-4">Contactez-nous</h1>
-        <form action="contact.html" method="post">
+        <form class="h-90" action="contact.html" method="post">
             <div class="form-group">
                 <label for="nom">Votre nom</label>
                 <input type="text" class="form-control" id="nom" name="nom" placeholder="Martin" required>
@@ -65,12 +65,12 @@
             </div>
             <div class="form-group">
                 <label for="sujet">Quel est le sujet de votre message ?</label>
-                <select class="form-control" name="sujet" id="sujet" required></select>
-                <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-                <option value="probleme-compte">Activité</option>
-                <option value="question-produit">Adhérer</option>
-                <option value="suivi-commande">Evènements</option>
-                <option value="autre">Autre...</option>
+                <select class="form-control" name="sujet" id="sujet" required>
+                    <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                    <option value="probleme-compte">Activité</option>
+                    <option value="question-produit">Adhérer</option>
+                    <option value="suivi-commande">Evènements</option>
+                    <option value="autre">Autre...</option>
                 </select>
             </div>
             <div class="form-group">
