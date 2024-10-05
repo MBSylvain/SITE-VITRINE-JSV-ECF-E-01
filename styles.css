@@ -4,6 +4,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+a, 
+.text-dark {
+    color: #008f8c !important;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link{
+    color: #008f8c !important; /* Couleur par défaut */
+    text-decoration: none; /* Retire le soulignement */
+}
+
+.nav-link:hover,
+.text-dark:hover {
+    color: #ff0080 !important; /* Couleur au survol */
+}
+
+
 
 
 @media (min-width: 300px) and (max-width: 767px) {
@@ -28,10 +47,12 @@
         align-items: center;
         justify-items: center;
         width: 100%;
+        
     }
     .card{
         width: 35%;
         padding: 4px;
+       
     }
 }
 
@@ -47,7 +68,7 @@
     }
     .card{
         width: 35%;
-        height: 400px;
+        
         padding: 4px;
     }
 }
@@ -66,7 +87,7 @@
     }
     .card{
         width: 25%;
-        height: 400px;
+       
         padding: 4px;
     }
 }
