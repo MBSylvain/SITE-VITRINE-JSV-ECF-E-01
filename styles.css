@@ -141,7 +141,7 @@ a,
     }
     .card{
         width: 50%;
-        
+        min-height: 100%;
         padding: 4px;
     }
     .card img {
