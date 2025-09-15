@@ -121,7 +121,7 @@ a,
         
     }
     .card{
-        width: 35%;
+        width: 100%;
         padding: 4px;
        
     }
@@ -149,8 +149,8 @@ a,
 
     }
     .card{
-        width: 50%;
-        min-height: 100%;
+        width: 1000%;
+        min-height: 600%;
         padding: 4px;
     }
     .card img {
