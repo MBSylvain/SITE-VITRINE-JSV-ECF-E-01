@@ -17,6 +17,14 @@ a,
     text-decoration: none; /* Retire le soulignement */
 }
 
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+
+
 .nav-link:hover,
 .text-dark:hover {
     color: #ff0080 !important; /* Couleur au survol */
@@ -24,6 +32,7 @@ a,
 
 
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+
 
 @media (min-width: 300px) and (max-width: 767px) {
     .activité {
