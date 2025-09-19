@@ -84,7 +84,7 @@ a,
 }
     .card:hover {
         transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 8px 24px rgba(0, 119, 182, 0.18);
+        //*box-shadow: 0 8px 24px rgba(0, 119, 182, 0.18);**/
     }
         flex-direction: column;
     color: #0077b6;
