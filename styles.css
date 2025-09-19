@@ -92,7 +92,7 @@ a,
     font-size: 1.3rem;
         align-items: flex-start;
     }
-    background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+    /** background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);**/
     border: none;
     border-radius: 24px;
     font-weight: 600;
@@ -105,10 +105,7 @@ a,
         box-shadow: 0 4px 16px rgba(0, 119, 182, 0.18);
     }
 }
-    background: #f1f8ff !important;
-    color: #0077b6 !important;
-    box-shadow: 0 -2px 8px rgba(0, 119, 182, 0.08);
-    font-size: 1rem;
+   
 
 @media (min-width: 768px) {
     .activité {
@@ -179,7 +176,6 @@ a,
     }
     .card{
         width: 100%;
-       
         padding: 4px;
     }
     .card img {
