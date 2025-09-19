@@ -241,10 +241,10 @@ a,
     }
         padding: 0.5rem 1.5rem;
     }
-    .navbar-brand img {
+    .navbar-brand img { 
         border-radius: 50%;
         border: 2px solid #fff;
-        box-shadow: 0 2px 8px rgba(0, 119, 182, 0.10);
+        //**box-shadow: 0 2px 8px rgba(0, 119, 182, 0.10);*/
     }
     .navbar-nav .nav-link {
         color: #fff !important;
