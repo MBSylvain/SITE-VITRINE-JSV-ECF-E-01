@@ -8,20 +8,24 @@
   <link href="styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- Font Awesome pour les icônes réseaux sociaux -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyZtM3C6Q+6QK1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">
-        <img src="logo ECF.JPG" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo ECF.JPG" width="36" height="36" class="d-inline-block align-top mr-2" alt="Logo JSV">
+        <span class="font-weight-bold">JSV</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Accueil</a>
           </li>
@@ -37,13 +41,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Réseaux sociaux
+              <span class="mr-1">Réseaux</span><i class="fab fa-facebook-f"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">facebook</a>
-              <a class="dropdown-item" href="#">twitter</a>
-              <a class="dropdown-item" href="#">instagram</a>
-
+              <a class="dropdown-item" href="#"><i class="fab fa-facebook-f mr-2"></i>Facebook</a>
+              <a class="dropdown-item" href="#"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+              <a class="dropdown-item" href="#"><i class="fab fa-instagram mr-2"></i>Instagram</a>
             </div>
           </li>
         </ul>
@@ -151,43 +154,32 @@
     <div class="container p-4">
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Jeunesse Sport avec sa Ville</h5>
+          <h5 class="text-uppercase font-weight-bold">Jeunesse Sport avec sa Ville</h5>
           <p>
             Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le sport.
           </p>
         </div>
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Liens</h5>
+          <h5 class="text-uppercase font-weight-bold">Liens</h5>
           <ul class="list-unstyled mb-0">
-            <li>
-              <a href="index.html" class="nav-link">Accueil</a>
-            </li>
-            <li>
-              <a href="#carouselExampleCaptions" class="nav-link">Activités</a>
-            </li>
-            <li>
-              <a href="event.html" class="nav-link">Événements</a>
-            </li>
-            <li>
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
+            <li><a href="index.html" class="nav-link">Accueil</a></li>
+            <li><a href="#activité" class="nav-link">Activités</a></li>
+            <li><a href="event.html" class="nav-link">Événements</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Réseaux sociaux</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a class="nav-link" href="#">facebook</a>
-              <a class="nav-link" href="#">twitter</a>
-              <a class="nav-link" href="#">instagram</a>
-            </li>
-
+          <h5 class="text-uppercase font-weight-bold">Réseaux sociaux</h5>
+          <ul class="list-unstyled mb-0 d-flex flex-column align-items-start">
+            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
+            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Jeunesse Sport avec sa Ville
+      © 2025 Jeunesse Sport avec sa Ville
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -200,3 +192,5 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 </body>
+
+</html>
