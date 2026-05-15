@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Custom CSS (if any) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="animations.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg shadow" style="background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important; border-radius: 0 0 18px 18px;">
@@ -51,9 +53,9 @@
     </nav>
   </header>
   <div class="image-accueil m-2 vh-90 d-flex align-items-center justify-content-center">
-    <img src="baniere accueil.JPG" class="img-fluid w-90 h-90" style="object-fit: cover;"
+    <img src="baniere accueil.JPG" class="img-fluid w-90 h-90 animate-on-scroll fade-in-up" style="object-fit: cover;"
       alt="image de la page d'accueil" />
-    <div class="text-acceuil position-absolute w-25 text-white">
+    <div class="text-acceuil position-absolute w-25 text-white animate-on-scroll fade-in-down">
       <h2 class="text-center">Bienvenue sur Jeunesse Sport avec sa Ville</h2>
       <p class="lead text-center mt-4">Partagez votre passion, découvrez de nouvelles activités et vivez le sport autrement dans une ambiance conviviale et dynamique !</p>
     </div>
@@ -61,69 +63,69 @@
   </div>
   </div>
   
-  <h1 class="text-center text-bold" id="activité">Qui sommes nous?</h1>
-      <div class="container text-center mb-4">
-        Notre association valorise l'esprit d'équipe, le respect et le plaisir de progresser ensemble. Que vous soyez débutant ou sportif confirmé, vous trouverez chez nous un environnement motivant pour vous dépasser, rencontrer de nouveaux amis et partager des moments inoubliables.   
+  <h1 class="text-center text-bold animate-on-scroll fade-in-down" id="activité">Qui sommes nous?</h1>
+      <div class="container text-center mb-4 animate-on-scroll fade-in-up">
+        Notre association valorise l'esprit d'équipe, le respect et le plaisir de progresser ensemble. Que vous soyez débutant ou sportif confirmé, vous trouverez chez nous un environnement mot[...]
         Rejoignez-nous pour vivre le sport autrement, participer à des événements festifs et contribuer à la vie locale !
       </div>
 
 
-  <h1 class="text-center text-bold" id="activité">Nos activités</h1>
+  <h1 class="text-center text-bold animate-on-scroll fade-in-down" id="activité">Nos activités</h1>
   
 
 <section class="activité container-fluid py-5">
     <div class="container">
-        <h2 class="section-title">Nos Activités Sportives</h2>
+        <h2 class="section-title animate-on-scroll fade-in-down">Nos Activités Sportives</h2>
         
         <div class="row justify-content-center">
 
             <!-- Basket-ball -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
                 <div class="card">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Joueurs de basket-ball en match">
                     <div class="card-body text-center">
                         <i class="sport-icon fas fa-basketball-ball"></i>
                         <h5 class="card-title">Basket-ball</h5>
-                        <p class="card-text">Rejoignez nos équipes pour des entraînements dynamiques, des tournois et des moments de partage. Ouvert à tous les niveaux, le basket favorise l'esprit d'équipe et la convivialité !</p>
+                        <p class="card-text">Rejoignez nos équipes pour des entraînements dynamiques, des tournois et des moments de partage. Ouvert à tous les niveaux, le basket favorise l'esp[...]</p>
                         <button class="btn btn-sport">En savoir plus</button>
                     </div>
                 </div>
             </div>
 
             <!-- Football -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
                 <div class="card">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Jeune footballeur en action">
                     <div class="card-body text-center">
                         <i class="sport-icon fas fa-futbol"></i>
                         <h5 class="card-title">Football</h5>
-                        <p class="card-text">Venez dribbler, marquer et vous amuser lors de nos séances de football. Activité idéale pour se dépenser, apprendre le fair-play et développer ses compétences sportives !</p>
+                        <p class="card-text">Venez dribbler, marquer et vous amuser lors de nos séances de football. Activité idéale pour se dépenser, apprendre le fair-play et développer se[...]</p>
                         <button class="btn btn-sport">En savoir plus</button>
                     </div>
                 </div>
             </div>
 
             <!-- Athlétisme -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
                 <div class="card">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Athlète en course sur piste">
                     <div class="card-body text-center">
                         <i class="sport-icon fas fa-running"></i>
                         <h5 class="card-title">Athlétisme</h5>
-                        <p class="card-text">Course, saut, lancer… L'athlétisme permet à chacun de repousser ses limites et de découvrir de nouvelles disciplines dans une ambiance motivante et bienveillante.</p>
+                        <p class="card-text">Course, saut, lancer… L'athlétisme permet à chacun de repousser ses limites et de découvrir de nouvelles disciplines dans une ambiance motivante [...]</p>
                         <button class="btn btn-sport">En savoir plus</button>
                     </div>
                 </div>
             </div>
 
             <!-- Équitation -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
                 <div class="card">
-                    <img class="card-img-top" src="https://images.unsplash.com/photo-1584527164545-503cee07d5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cavalier et son cheval en promenade">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1584527164545-503cee07d5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cavalier et son cheval en prom[...]
                     <div class="card-body text-center">
                         <i class="sport-icon fas fa-horse"></i>
                         <h5 class="card-title">Équitation</h5>
-                        <p class="card-text">Initiez-vous ou perfectionnez-vous à l'équitation avec nos partenaires locaux. Une activité qui allie respect de l'animal, maîtrise de soi et plaisir en pleine nature.</p>
+                        <p class="card-text">Initiez-vous ou perfectionnez-vous à l'équitation avec nos partenaires locaux. Une activité qui allie respect de l'animal, maîtrise de soi et plai[...]</p>
                         <button class="btn btn-sport">En savoir plus</button>
                     </div>
                 </div>
@@ -132,7 +134,7 @@
         </div>
     </div>
 </section>
-  <footer class="text-center text-lg-start mt-4 shadow">
+  <footer class="text-center text-lg-start mt-4 shadow animate-on-scroll fade-in-up">
     <div class="container p-4">
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -173,5 +175,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <!-- Animations JS -->
+  <script src="animations.js"></script>
   </body>
 </html>
