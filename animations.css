@@ -1,0 +1,521 @@
+/* ============================================
+   🎨 ANIMATIONS CSS PRO - JSV
+   Version 1.0 - 2026-05-15
+   ============================================ */
+
+/* ============ RESPECT PRÉFÉRENCES UTILISATEUR ============ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============ KEYFRAMES ANIMATIONS ============ */
+
+/* 1. FADE IN UP - Apparition depuis le bas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 2. FADE IN DOWN - Apparition depuis le haut */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 3. FADE IN LEFT - Apparition depuis la gauche */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-40px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 4. FADE IN RIGHT - Apparition depuis la droite */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(40px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 5. SCALE IN - Apparition avec zoom */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 6. SLIDE UP - Coulisse vers le haut */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 7. GLOW - Brillance pulsante */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 119, 182, 0.3),
+                    0 0 20px rgba(0, 180, 216, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 119, 182, 0.6),
+                    0 0 40px rgba(0, 180, 216, 0.3);
+    }
+}
+
+/* 8. PULSE - Pulsation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* 9. BOUNCE - Rebondissement */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 10. RIPPLE - Onde au clic */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 11. FLOAT - Flottement léger */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 12. SHAKE - Secousse légère */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* 13. ROTATE IN - Rotation d'entrée */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* 14. UNDERLINE - Soulignement animé */
+@keyframes underline {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* ============ CLASSES D'ANIMATION ============ */
+
+/* Classe principale d'animation au scroll */
+.animate-on-scroll {
+    opacity: 0;
+    animation: none;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.fade-in-down {
+    animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.fade-in-left {
+    animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.fade-in-right {
+    animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Délais en cascade pour les enfants */
+.animate-on-scroll:nth-child(1) { animation-delay: 0s; }
+.animate-on-scroll:nth-child(2) { animation-delay: 0.15s; }
+.animate-on-scroll:nth-child(3) { animation-delay: 0.3s; }
+.animate-on-scroll:nth-child(4) { animation-delay: 0.45s; }
+.animate-on-scroll:nth-child(5) { animation-delay: 0.6s; }
+.animate-on-scroll:nth-child(6) { animation-delay: 0.75s; }
+
+/* ============ ANIMATIONS DE CARTES ============ */
+
+.card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 119, 182, 0.2);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08) rotate(1deg);
+    filter: brightness(1.1);
+}
+
+/* Animation de l'icône sport */
+.card .sport-icon {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.card:hover .sport-icon {
+    animation: bounce 0.6s ease;
+    color: #00b4d8;
+    transform: scale(1.2);
+}
+
+/* Animation du titre de la carte */
+.card .card-title {
+    transition: all 0.3s ease;
+    color: #0077b6;
+    font-weight: 600;
+}
+
+.card:hover .card-title {
+    color: #00b4d8;
+}
+
+/* ============ ANIMATIONS DE BOUTONS ============ */
+
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-sport {
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.2);
+}
+
+.btn-sport:hover,
+.btn-sport:focus {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 119, 182, 0.35);
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    color: #fff;
+}
+
+.btn-sport:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Effet ripple sur les boutons */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.btn:active::before {
+    animation: ripple 0.6s ease-out;
+}
+
+/* ============ ANIMATIONS DE NAVIGATION ============ */
+
+.navbar {
+    animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    color: #fff !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ff0080;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ============ ANIMATIONS DU FOOTER ============ */
+
+footer {
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============ BOUTON SCROLL TO TOP ============ */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    z-index: 99;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+    transition: all 0.3s ease;
+    animation: slideUp 0.4s ease;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 119, 182, 0.5);
+}
+
+#scrollTopBtn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ============ ANIMATIONS DE TEXTE ============ */
+
+h1, h2, h3, h4, h5, h6 {
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    color: #0077b6;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-title:hover::before {
+    width: 100%;
+}
+
+/* ============ ANIMATIONS DE BANNIÈRE ============ */
+
+.image-accueil {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.image-accueil img {
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============ ANIMATIONS RESPONSIVE ============ */
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .animate-on-scroll {
+        animation-duration: 0.6s !important;
+    }
+
+    .card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+
+    .btn-sport:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    #scrollTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .nav-link::after {
+        height: 1px;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .animate-on-scroll {
+        animation-duration: 0.7s;
+    }
+
+    .card:hover {
+        transform: translateY(-6px) scale(1.015);
+    }
+}
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+    .animate-on-scroll {
+        animation-duration: 0.8s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+
+    .btn-sport:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
+}
+
+/* ============ UTILITIES ============ */
+
+.opacity-0 { opacity: 0; }
+.opacity-1 { opacity: 1; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.duration-300 { animation-duration: 0.3s; }
+.duration-500 { animation-duration: 0.5s; }
+.duration-700 { animation-duration: 0.7s; }
+.duration-1000 { animation-duration: 1s; }
+
+/* ============ ACCESSIBILITY ============ */
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll,
+    .btn,
+    .card,
+    .nav-link {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ============ OPTIMISATION PERFORMANCE ============ */
+
+.card,
+.btn,
+.nav-link,
+.animate-on-scroll {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate3d(0, 0, 0);
+}
