@@ -1,13 +1,14 @@
-/* ⚙️ ANIMATIONS JAVASCRIPT - JSV */
+/* ==========================================================================
+   ⚙️ ANIMATIONS JAVASCRIPT & INTERACTIONS - JSV
+   ========================================================================== */
 
 (function() {
     'use strict';
 
     const config = {
-        throttleDelay: 10,
-        observerThreshold: 0.1,
-        scrollSpeedMultiplier: 0.5,
-        scrollTopButtonThreshold: 300
+        throttleDelay: 16,
+        observerThreshold: 0.15,
+        scrollTopButtonThreshold: 280
     };
 
     function throttle(func, delay) {
@@ -21,32 +22,32 @@
         };
     }
 
-    function debounce(func, delay) {
-        let timeoutId;
-        return function(...args) {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => func(...args), delay);
-        };
-    }
-
     // 1. Intersection Observer - Animations au scroll
     function initIntersectionObserver() {
+        if (!('IntersectionObserver' in window)) {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                el.classList.add('fade-in-up');
+            });
+            return;
+        }
+
         const observerOptions = {
             threshold: config.observerThreshold,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -40px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (!entry.target.classList.contains('fade-in-down') &&
-                        !entry.target.classList.contains('fade-in-left') &&
-                        !entry.target.classList.contains('fade-in-right') &&
-                        !entry.target.classList.contains('scale-in') &&
-                        !entry.target.classList.contains('slide-up')) {
-                        entry.target.classList.add('fade-in-up');
+                    const el = entry.target;
+                    if (!el.classList.contains('fade-in-down') &&
+                        !el.classList.contains('fade-in-left') &&
+                        !el.classList.contains('fade-in-right') &&
+                        !el.classList.contains('scale-in') &&
+                        !el.classList.contains('slide-up')) {
+                        el.classList.add('fade-in-up');
                     }
-                    observer.unobserve(entry.target);
+                    observer.unobserve(el);
                 }
             });
         }, observerOptions);
@@ -57,37 +58,42 @@
         });
     }
 
-    // 2. Parallax Effect
+    // 2. Parallax Effect doux sur Hero
     function initParallax() {
-        const parallaxElement = document.querySelector('.image-accueil');
-        if (!parallaxElement) return;
+        const bgImg = document.querySelector('.hero-bg-img');
+        if (!bgImg) return;
 
         const handleParallax = throttle(function() {
-            const scrollPosition = window.pageYOffset;
-            const parallaxOffset = scrollPosition * config.scrollSpeedMultiplier;
-            parallaxElement.style.transform = `translateY(${parallaxOffset}px)`;
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollY < 700) {
+                bgImg.style.transform = `translateY(${scrollY * 0.2}px)`;
+            }
         }, config.throttleDelay);
 
-        window.addEventListener('scroll', handleParallax);
+        window.addEventListener('scroll', handleParallax, { passive: true });
     }
 
     // 3. Scroll To Top Button
     function initScrollToTopButton() {
+        if (document.getElementById('scrollTopBtn')) return;
+
         const scrollTopBtn = document.createElement('button');
         scrollTopBtn.id = 'scrollTopBtn';
         scrollTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        scrollTopBtn.setAttribute('title', 'Retour au top');
+        scrollTopBtn.setAttribute('title', 'Retour en haut');
+        scrollTopBtn.setAttribute('aria-label', 'Retour en haut de page');
         document.body.appendChild(scrollTopBtn);
 
         const handleScroll = throttle(function() {
-            if (window.pageYOffset > config.scrollTopButtonThreshold) {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollY > config.scrollTopButtonThreshold) {
                 scrollTopBtn.style.display = 'block';
             } else {
                 scrollTopBtn.style.display = 'none';
             }
         }, config.throttleDelay);
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         scrollTopBtn.addEventListener('click', function() {
             window.scrollTo({
@@ -97,55 +103,71 @@
         });
     }
 
-    // 4. Smooth Scroll
+    // 4. Smooth Scroll avec compensation de la barre de navigation fixe
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
-                if (href === '#') return;
+                if (!href || href === '#' || href.startsWith('#modal')) return;
 
-                e.preventDefault();
                 const targetElement = document.querySelector(href);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    e.preventDefault();
+                    const nav = document.querySelector('.navbar');
+                    const navHeight = nav ? nav.offsetHeight : 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - navHeight - 10;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
+
+                    // Fermeture automatique du menu déroulant sur mobile
+                    const navbarCollapse = document.getElementById('navbarNavDropdown');
+                    if (navbarCollapse && navbarCollapse.classList.contains('show') && window.jQuery) {
+                        window.jQuery('#navbarNavDropdown').collapse('hide');
+                    }
                 }
             });
         });
     }
 
-    // 5. Active Link Highlight
+    // 5. Active Link Highlight sur sections réelles
     function initActiveLinkHighlight() {
-        const sections = document.querySelectorAll('[id]');
+        const sections = document.querySelectorAll('section[id], header[id]');
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        if (!sections.length) return;
 
         const handleScroll = throttle(function() {
             let current = '';
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 200) {
+                if (scrollY >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
+            if (current) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current || href === 'index.html#' + current) {
+                        link.classList.add('active');
+                    } else if (href && href.startsWith('#')) {
+                        link.classList.remove('active');
+                    }
+                });
+            }
         }, config.throttleDelay);
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
     }
 
-    // 6. Ripple Effect
+    // 6. Ripple Effect sur les boutons
     function initRippleEffect() {
-        document.querySelectorAll('.btn').forEach(btn => {
+        document.querySelectorAll('.btn-sport, .btn-cta').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const rect = this.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -158,7 +180,7 @@
                 ripple.style.width = '0';
                 ripple.style.height = '0';
                 ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.background = 'rgba(255, 255, 255, 0.45)';
                 ripple.style.pointerEvents = 'none';
                 ripple.style.transform = 'translate(-50%, -50%)';
 
@@ -166,45 +188,17 @@
                 this.style.overflow = 'hidden';
                 this.appendChild(ripple);
 
-                const size = Math.max(rect.width, rect.height);
+                const size = Math.max(rect.width, rect.height) * 2;
                 ripple.style.width = size + 'px';
                 ripple.style.height = size + 'px';
-                ripple.style.animation = 'ripple 0.6s ease-out';
+                ripple.style.animation = 'ripple 0.5s ease-out';
 
-                setTimeout(() => ripple.remove(), 600);
+                setTimeout(() => ripple.remove(), 500);
             });
         });
     }
 
-    // 7. Card Animations
-    function initCardAnimations() {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach((card, index) => {
-            card.style.animationDelay = (index * 0.15) + 's';
-            if (!card.classList.contains('animate-on-scroll')) {
-                card.classList.add('animate-on-scroll', 'fade-in-up');
-            }
-        });
-    }
-
-    // 8. Navbar Animation
-    function initNavbarAnimation() {
-        const navbar = document.querySelector('.navbar');
-        if (!navbar) return;
-
-        const handleNavbarScroll = throttle(function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > 100) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 119, 182, 0.2)';
-            } else {
-                navbar.style.boxShadow = '0 2px 8px rgba(0, 119, 182, 0.08)';
-            }
-        }, config.throttleDelay);
-
-        window.addEventListener('scroll', handleNavbarScroll);
-    }
-
-    // 9. Initialize All
+    // 7. Initialisation globale
     function initAll() {
         initIntersectionObserver();
         initParallax();
@@ -212,20 +206,15 @@
         initSmoothScroll();
         initActiveLinkHighlight();
         initRippleEffect();
-        initCardAnimations();
-        initNavbarAnimation();
     }
 
-    // Start initialization
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initAll);
     } else {
         initAll();
     }
-
 })();
 
-// Helper function
 window.animateElement = function(element, animationClass, delay = 0) {
     setTimeout(() => {
         element.classList.add('animate-on-scroll', animationClass);

@@ -1,234 +1,698 @@
-* {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a, 
-.text-dark {
-    color: #008f8c !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 10px;
+/* ==========================================================================
+   SITE VITRINE - JEUNESSE SPORT AVEC SA VILLE (JSV)
+   Feuille de styles principale - Design Moderne & Responsive
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS & DESIGN TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  --primary-navy: #023e8a;
+  --primary-blue: #0077b6;
+  --primary-cyan: #00b4d8;
+  --primary-light: #e0f7fa;
+  --accent-orange: #ff6b35;
+  --accent-orange-hover: #f2541b;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #f8fafc;
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --border-light: #e2e8f0;
+  --shadow-subtle: 0 4px 20px rgba(0, 119, 182, 0.08);
+  --shadow-medium: 0 10px 25px rgba(0, 119, 182, 0.14);
+  --shadow-hover: 0 15px 35px rgba(0, 119, 182, 0.22);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.nav-link{
-    color: #008f8c !important; /* Couleur par défaut */
-    text-decoration: none; /* Retire le soulignement */
+/* --------------------------------------------------------------------------
+   2. RÉINITIALISATION & TYPOGRAPHIE GLOBALE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.card-img-top {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-navy);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. NAVIGATION & EN-TÊTE
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: relative;
+  z-index: 1030;
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
   transition: transform 0.3s ease;
 }
 
-.card:hover .card-img-top {
-  transform: scale(1.1);
+.navbar-brand:hover img {
+  transform: rotate(6deg) scale(1.05);
 }
 
-.nav-link:hover,
-.text-dark:hover {
-    color: #ff0080 !important; /* Couleur au survol */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 20px;
+  position: relative;
+  transition: var(--transition);
 }
 
-/* font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; */
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12);
+}
 
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.22);
+}
 
-@media (min-width: 300px) and (max-width: 767px) {
-    .activité {
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-    }
-    .card{
-        width: 100%;
-    color: #0077b6 !important;
-    font-size: 1.1rem;
-    text-decoration: none;
-    padding: 8px;
-    transition: color 0.2s;
-        height: auto;
-        object-fit: cover;
-    }
-    .image-accueil {
-        flex-direction: column !important;
-    color: #0077b6 !important;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    }
-    .text-acceuil {
-        position: absolute;
-        top: 10px;
-        left: 0;
-    color: #00b4d8 !important;
-        font-size: 1rem;
-        text-align: center;
-    background: linear-gradient(135deg, #f1f8ff 0%, #e0f7fa 100%);
-    min-height: 100vh;
-    }
-    header .navbar {
-    box-shadow: 0 2px 8px rgba(0, 119, 182, 0.08);
-    background: #ffffff;
-        flex-direction: column;
-        align-items: flex-start;
-    border-radius: 18px;
-    box-shadow: 0 4px 16px rgba(0, 119, 182, 0.10);
-    background: #ffffff;
+/* Bouton CTA navigation */
+.btn-cta {
+  background-color: var(--accent-orange);
+  color: #ffffff !important;
+  font-weight: 700;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-cta:hover {
+  background-color: var(--accent-orange-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Bouton hamburger mobile */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.95)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-medium);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-navy);
+  padding-left: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. BANNIÈRE HERO (ACCUEIL)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 85vh;
+  margin-top: 65px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(100deg, rgba(2, 62, 138, 0.92) 0%, rgba(0, 119, 182, 0.82) 50%, rgba(0, 180, 216, 0.5) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 650px;
+}
+
+.badge-accent {
+  background-color: var(--accent-orange);
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   5. BANNIÈRE DE PAGE (ÉVÉNEMENTS & CONTACT)
+   -------------------------------------------------------------------------- */
+.page-banner {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 70%, var(--primary-cyan) 100%);
+  margin-top: 65px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. TITRES DE SECTION & STYLES COMMUNS
+   -------------------------------------------------------------------------- */
+.section-tag {
+  color: var(--primary-blue);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  display: block;
+}
+
+.section-title {
+  color: var(--primary-navy);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.title-bar {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
+  border-radius: 2px;
+  margin: 0.75rem auto 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Boîte Caractéristiques "À propos" */
+.feature-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-cyan);
+}
+
+.feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   7. CARTES D'ACTIVITÉS SPORTIVES
+   -------------------------------------------------------------------------- */
+.sport-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.sport-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-wrapper .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sport-card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+.sport-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(2, 62, 138, 0.85);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.sport-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-cyan) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.25);
+  margin-top: -30px;
+  position: relative;
+  z-index: 3;
+}
+
+.sport-card .card-title {
+  color: var(--primary-navy);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.sport-card .card-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   8. CARTES D'ÉVÉNEMENTS
+   -------------------------------------------------------------------------- */
+.event-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.event-img-wrapper {
+  height: 230px;
+  overflow: hidden;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.06);
+}
+
+.event-date-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ffffff;
+  color: var(--primary-navy);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.event-date-badge .day {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+}
+
+.event-date-badge .month {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.event-category-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECTION CONTACT & FORMULAIRE
+   -------------------------------------------------------------------------- */
+.contact-info-card,
+.contact-form-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-cyan) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+}
+
+.form-control {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+}
+
+.input-group-text {
+  border-color: var(--border-light);
+}
+
+/* --------------------------------------------------------------------------
+   10. BOUTONS & ÉLÉMENTS D'ACTION
+   -------------------------------------------------------------------------- */
+.btn-sport {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-cyan) 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.25);
+  transition: var(--transition);
+}
+
+.btn-sport:hover {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.35);
+}
+
+/* Bannière d'appel à l'action (CTA) */
+.cta-banner {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   11. PIED DE PAGE (FOOTER)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(135deg, #012a5e 0%, var(--primary-navy) 100%);
+  color: #ffffff;
+  margin-top: 3rem;
+}
+
+.footer-heading {
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 3px;
+  background: var(--primary-cyan);
+  border-radius: 2px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: #ffffff !important;
+  transform: translateX(4px);
+}
+
+.social-links .social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.social-links .social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-links .facebook:hover { background-color: #1877f2; }
+.social-links .twitter:hover { background-color: #1da1f2; }
+.social-links .instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   12. MEDIA QUERIES & RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+
+/* Très petits écrans (< 576px) */
+@media (max-width: 575.98px) {
+  .hero-section {
+    min-height: 70vh;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-    .card:hover {
-        transform: translateY(-4px) scale(1.02);
-        /* box-shadow: 0 8px 24px rgba(0, 119, 182, 0.18); */
-    }
-    /* Removed misplaced properties and closed block properly */
-    .btn-primary:hover {
-        background: linear-gradient(90deg, #00b4d8 0%, #0077b6 100%);
-        box-shadow: 0 4px 16px rgba(0, 119, 182, 0.18);
-    }
-}
-   
+    margin-right: 0 !important;
+  }
 
-@media (min-width: 768px) {
-    .activité {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        width: 100%;
-        
-    }
-    .card{
-        width: 100%;
-        padding: 4px;
-       
-    }
-    .card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-    .image-accueil {
-        height: 350px;
-    }
-    .text-acceuil {
-        font-size: 1.5rem;
-    }
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .card-img-wrapper {
+    height: 180px;
+  }
+
+  .event-img-wrapper {
+    height: 190px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.5rem !important;
+  }
 }
 
-@media (min-width: 992px) {
-    .activité {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        width: 100%;
+/* Tablettes (576px à 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
 
-    }
-    .card{
-        width: 1000%;
-        padding: 4px;
-    }
-    .card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
-    .image-accueil {
-        height: 400px;
-    }
-    .text-acceuil {
-    .text-acceuil {
-        font-size: 2rem;
-    }
+  .hero-section {
+    min-height: 75vh;
+  }
+
+  .card-img-wrapper {
+    height: 190px;
+  }
 }
+
+/* Navigation collapse sur mobile / tablette (< 992px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-top: 0.75rem;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.6rem 1rem !important;
+    margin: 2px 0;
+  }
+
+  .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    margin-left: 1rem;
+  }
+}
+
+/* Grands écrans (> 1200px) */
 @media (min-width: 1200px) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        width: 100%;
-        padding: 4px;
-
-    }
-    .card{
-        width: 100%;
-        padding: 4px;
-    }
-    .card img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-    .image-accueil {
-        height: 500px;
-    }
-    .text-acceuil {
-        font-size: 2.5rem;
-    }
+  .container {
+    max-width: 1180px;
+  }
 }
-    /* FOOTER MODERNE */
-    footer {
-    /* FOOTER MODERNE */
-    footer {
-        background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important;
-        color: #fff !important;
-        box-shadow: 0 -2px 8px rgba(0, 119, 182, 0.12);
-        font-size: 1rem;
-        border-radius: 18px 18px 0 0;
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
-    footer h5 {
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-    footer a.nav-link {
-        color: #fff !important;
-        font-weight: 500;
-        border-radius: 8px;
-        transition: background 0.2s, color 0.2s;
-        padding: 4px 12px;
-    }
-    footer a.nav-link:hover {
-        background: #00b4d8;
-        color: #fff !important;
-    }
-    /* NAVBAR MODERNE */
-    .navbar {
-        background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important;
-        box-shadow: 0 2px 8px rgba(0, 119, 182, 0.12);
-        border-radius: 0 0 18px 18px;
-        padding: 0.5rem 1.5rem;
-    }
-    /* Responsive texte des cartes */
-    .card p {
-        font-size: 1.05rem;
-        line-height: 1.5;
-        margin-bottom: 0.5rem;
-        color: #333;
-    }
-    @media (max-width: 767px) {
-        .card p {
-            font-size: 0.95rem;
-            line-height: 1.4;
-            padding: 0 2px;
-        }
-    }
-    .navbar-brand img { 
-        border-radius: 50%;
-        border: 2px solid #fff;
-        /* box-shadow: 0 2px 8px rgba(0, 119, 182, 0.10); */
-    }
-    .navbar-toggler-icon {
-        background-image: url('icons8-menu-30.png');
-    }

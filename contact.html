@@ -1,152 +1,292 @@
 <!doctype html>
-<html>
-
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Replit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Contactez Jeunesse Sport avec sa Ville (JSV). Inscriptions, renseignements sur nos sections sportives, adhésions et partenariats." />
+    <title>Contact - Jeunesse Sport avec sa Ville</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="animations.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg shadow"
-            style="background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important; border-radius: 0 0 18px 18px;">
-            <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-                <img src="logo ECF.JPG" width="40" height="40" class="d-inline-block align-top mr-2 rounded-circle"
-                    alt="Logo JSV">
-                <span class="font-weight-bold h4 mb-0">JSV</span>
-            </a>
-            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="#activité">Activités</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="event.html">Événements</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown mx-1">
-                        <a class="nav-link dropdown-toggle text-white font-weight-bold px-3 rounded-pill" href="#"
-                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <i class="fas fa-share-alt mr-1"></i>Réseaux
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right bg-light" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-twitter text-info mr-2"></i>Twitter</a>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
-                        </div>
-                    </li>
-                </ul>
+    <!-- En-tête & Navigation -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo ECF.JPG" width="44" height="44" class="d-inline-block align-top mr-2 rounded-circle border border-white" alt="Logo JSV">
+            <div class="d-flex flex-column">
+              <span class="font-weight-bold brand-title">JSV</span>
+              <span class="brand-subtitle">Sport & Jeunesse</span>
             </div>
-        </nav>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html#a-propos">À propos</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html#activites">Activités</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="event.html">Événements</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3 active" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown mx-lg-1">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-share-alt mr-1"></i>Réseaux
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter text-info mr-2"></i>Twitter</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
+                </div>
+              </li>
+              <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                <a class="btn btn-cta btn-sm rounded-pill px-3 shadow-sm" href="contact.html">Rejoindre le club</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <div class="container h-100">
-        <h1 class="text-center m-4">Contactez-nous</h1>
-        <form class="h-90" action="contact.html" method="post">
-            <div class="form-group">
-                <label for="nom">Votre nom</label>
-                <input type="text" class="form-control" id="nom" name="nom" placeholder="Martin" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Votre e-mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="monadresse@mail.com"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="sujet">Quel est le sujet de votre message ?</label>
-                <select class="form-control" name="sujet" id="sujet" required>
-                    <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-                    <option value="probleme-compte">Activité</option>
-                    <option value="question-produit">Adhérer</option>
-                    <option value="suivi-commande">Evènements</option>
-                    <option value="autre">Autre...</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Votre message</label>
-                <textarea class="form-control" id="message" name="message"
-                    placeholder="Bonjour, je vous contacte car...." required></textarea>
-            </div>
-            <div>
-                <button class="btn btn-primary" type="submit">Envoyer mon message</button>
-            </div>
-        </form>
 
-    </div>
+    <main>
+        <!-- En-tête de page -->
+        <section class="page-banner text-center text-white py-5">
+            <div class="container py-4 animate-on-scroll fade-in-down">
+                <span class="badge badge-accent mb-3 px-3 py-2 text-uppercase font-weight-bold">Restons en contact</span>
+                <h1 class="display-4 font-weight-bold mb-3">Contactez-nous</h1>
+                <p class="lead mx-auto text-white-50" style="max-width: 650px;">
+                    Une question sur nos cours, les inscriptions ou une séance d'essai ? Notre équipe vous répond avec grand plaisir.
+                </p>
+            </div>
+        </section>
 
-    <footer class="text-center text-lg-start mt-4 shadow">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Jeunesse Sport avec sa Ville</h5>
-                    <p>
-                        Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le
-                        sport.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Liens</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="index.html" class="nav-link">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="#activité" class="nav-link">Activités</a>
-                        </li>
-                        <li>
-                            <a href="event.html" class="nav-link">Événements</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Réseaux sociaux</h5>
-                    <ul class="list-unstyled mb-0 d-flex flex-column align-items-start">
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-facebook-f text-white bg-primary rounded-circle p-2 mr-2"></i>Facebook</a>
-                        </li>
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-twitter text-white bg-info rounded-circle p-2 mr-2"></i>Twitter</a>
-                        </li>
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-instagram text-white bg-danger rounded-circle p-2 mr-2"></i>Instagram</a>
-                        </li>
-                    </ul>
+        <!-- Section Contact & Coordonnées -->
+        <section class="contact-section py-5 bg-light">
+            <div class="container py-3">
+                <div class="row">
+                    <!-- Colonne Coordonnées & Infos pratiques -->
+                    <div class="col-lg-5 mb-4 animate-on-scroll fade-in-left">
+                        <div class="contact-info-card bg-white p-4 p-md-5 rounded-lg shadow-sm h-100">
+                            <span class="section-tag text-uppercase font-weight-bold">Informations</span>
+                            <h3 class="font-weight-bold mb-4 text-primary">Nos coordonnées</h3>
+                            
+                            <div class="info-item d-flex align-items-start mb-4">
+                                <div class="icon-circle mr-3">
+                                    <i class="fas fa-map-marked-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold mb-1">Siège & Complexe</h5>
+                                    <p class="text-muted mb-0">12 Avenue des Sports, 75000 Ville</p>
+                                    <small class="text-info font-weight-bold">Gymnase Jean Jaurès & Stade Municipal</small>
+                                </div>
+                            </div>
+
+                            <div class="info-item d-flex align-items-start mb-4">
+                                <div class="icon-circle mr-3">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold mb-1">Téléphone</h5>
+                                    <p class="text-muted mb-0">+33 (0)1 23 45 67 89</p>
+                                    <small class="text-muted">Du lundi au vendredi de 9h à 18h</small>
+                                </div>
+                            </div>
+
+                            <div class="info-item d-flex align-items-start mb-4">
+                                <div class="icon-circle mr-3">
+                                    <i class="fas fa-envelope-open-text text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold mb-1">Courrier électronique</h5>
+                                    <p class="text-muted mb-0">contact@jsv-sport.fr</p>
+                                    <small class="text-muted">Réponse sous 24 à 48 heures</small>
+                                </div>
+                            </div>
+
+                            <div class="info-item d-flex align-items-start">
+                                <div class="icon-circle mr-3">
+                                    <i class="fas fa-calendar-check text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-weight-bold mb-1">Permanence adhésions</h5>
+                                    <p class="text-muted mb-0">Mercredi : 14h - 18h<br>Samedi : 10h - 13h</p>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <h5 class="font-weight-bold mb-3">Rejoignez nos communautés</h5>
+                            <div class="d-flex social-links">
+                                <a class="social-icon facebook mr-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-icon twitter mr-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a class="social-icon instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne Formulaire -->
+                    <div class="col-lg-7 mb-4 animate-on-scroll fade-in-right">
+                        <div class="contact-form-card bg-white p-4 p-md-5 rounded-lg shadow-sm h-100">
+                            <span class="section-tag text-uppercase font-weight-bold">Formulaire</span>
+                            <h3 class="font-weight-bold mb-4 text-primary">Envoyez-nous un message</h3>
+
+                            <div id="formAlertSuccess" class="alert alert-success d-none shadow-sm" role="alert">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <strong>Message envoyé avec succès !</strong> Notre équipe vous contactera dans les plus brefs délais.
+                            </div>
+
+                            <form id="contactForm" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label for="nom" class="font-weight-bold">Votre nom complet <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-light border-right-0"><i class="fas fa-user text-muted"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" id="nom" name="nom" placeholder="Ex: Martin Dupont" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label for="email" class="font-weight-bold">Votre e-mail <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-light border-right-0"><i class="fas fa-envelope text-muted"></i></span>
+                                            </div>
+                                            <input type="email" class="form-control border-left-0" id="email" name="email" placeholder="nom@exemple.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="sujet" class="font-weight-bold">Objet de votre demande <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-light border-right-0"><i class="fas fa-tag text-muted"></i></span>
+                                        </div>
+                                        <select class="form-control border-left-0" name="sujet" id="sujet" required>
+                                            <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                                            <option value="inscription">Inscription ou adhésion club</option>
+                                            <option value="essai">Demande de séance d'essai gratuite</option>
+                                            <option value="activites">Renseignements sur une activité sportive</option>
+                                            <option value="evenements">Question sur un événement ou tournoi</option>
+                                            <option value="partenariat">Partenariat / Bénévolat</option>
+                                            <option value="autre">Autre demande...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label for="message" class="font-weight-bold">Votre message <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                        placeholder="Bonjour, je souhaite des renseignements concernant..." required></textarea>
+                                </div>
+
+                                <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between">
+                                    <button class="btn btn-sport btn-lg px-4 shadow mb-2 mb-sm-0" type="submit">
+                                        <i class="fas fa-paper-plane mr-2"></i>Envoyer mon message
+                                    </button>
+                                    <small class="text-muted"><i class="fas fa-shield-alt mr-1"></i>Vos données restent confidentielles.</small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer shadow mt-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+            <div class="d-flex align-items-center mb-3">
+              <img src="logo ECF.JPG" width="40" height="40" class="rounded-circle mr-2 border border-white" alt="Logo JSV">
+              <h5 class="text-uppercase font-weight-bold mb-0 text-white">Jeunesse Sport avec sa Ville</h5>
+            </div>
+            <p class="footer-desc text-white-50 pr-lg-4">
+              Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le sport dans un cadre convivial et sécurisé.
+            </p>
+            <div class="footer-contact-item text-white-50 small mb-1">
+              <i class="fas fa-map-marker-alt mr-2 text-info"></i>Complexe Sportif Municipal, 75000 Ville
+            </div>
+            <div class="footer-contact-item text-white-50 small">
+              <i class="fas fa-envelope mr-2 text-info"></i>contact@jsv-sport.fr
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Navigation</h5>
+            <ul class="list-unstyled mb-0 footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Accueil</a></li>
+              <li><a href="index.html#a-propos" class="footer-link"><i class="fas fa-angle-right mr-2"></i>À propos</a></li>
+              <li><a href="index.html#activites" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Nos Activités</a></li>
+              <li><a href="event.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Événements</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Suivez l'aventure</h5>
+            <p class="text-white-50 small mb-3">Restez informés des tournois, stages et résultats du club sur nos réseaux sociaux.</p>
+            <div class="d-flex social-links">
+              <a class="social-icon facebook mr-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-icon twitter mr-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a class="social-icon instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="text-center p-3"
-            style="background: rgba(0, 119, 182, 0.8); color: #fff; border-radius: 0 0 18px 18px;">
-            © 2025 Jeunesse Sport avec sa Ville
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <div class="container text-white-50 small d-flex flex-column flex-sm-row justify-content-between align-items-center">
+          <span>&copy; 2025 Jeunesse Sport avec sa Ville (JSV) - Tous droits réservés.</span>
+          <span class="mt-2 mt-sm-0">ECF COURS 01</span>
         </div>
+      </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j6f3e6tbh5g1f5p2NbS5"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
 
+    <!-- Scripts Bootstrap bundle (inclut Popper) et animations -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animations JS -->
+    <script src="animations.js"></script>
+    <script>
+      // Formulaire de contact avec validation et confirmation dynamique
+      document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (this.checkValidity()) {
+              const alertSuccess = document.getElementById('formAlertSuccess');
+              if (alertSuccess) {
+                  alertSuccess.classList.remove('d-none');
+                  alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+              this.reset();
+          } else {
+              this.reportValidity();
+          }
+      });
+    </script>
+</body>
 </html>

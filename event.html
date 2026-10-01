@@ -1,192 +1,273 @@
 <!doctype html>
-<html>
-
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Replit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Les événements et compétitions sportives de Jeunesse Sport avec sa Ville (JSV). Tournois, championnats et olympiades locales !" />
+    <title>Événements - Jeunesse Sport avec sa Ville</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="animations.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg shadow"
-            style="background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important; border-radius: 0 0 18px 18px;">
-            <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-                <img src="logo ECF.JPG" width="40" height="40" class="d-inline-block align-top mr-2 rounded-circle"
-                    alt="Logo JSV">
-                <span class="font-weight-bold h4 mb-0">JSV</span>
-            </a>
-            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="#activité">Activités</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="event.html">Événements</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown mx-1">
-                        <a class="nav-link dropdown-toggle text-white font-weight-bold px-3 rounded-pill" href="#"
-                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <i class="fas fa-share-alt mr-1"></i>Réseaux
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right bg-light" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-twitter text-info mr-2"></i>Twitter</a>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><i
-                                    class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1 class="text-center m-4">Les évènements JSV</h1>
+    <!-- En-tête & Navigation -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
         <div class="container">
-            <div class="container text-center justify-content-center">
-                <div class="card w-25 mx-auto my-3">
-                    <img src="téléchargement.jpeg"></img>
-                </div>
-                <div class="card-body">
-                    <h5 class="text-center"> Jeux Olympiques de jsv 2024</h5>
-                    <p class="text-justify">Au cœur de cet événement, l'idéal olympique transcende les frontières,
-                        tissant des liens de paix
-                        et d'amitié entre des athlètes portant avec fierté les couleurs de leurs nations respectives.
-                        Ces jeux ne sont pas simplement des compétitions, mais des histoires épiques écrites par des
-                        athlètes qui deviennent des héros modernes, créant des moments inoubliables qui résonnent à
-                        travers le monde. </p>
-                </div>
-                <div class="container text-center justify-content-center my-3">
-                    <div class="w-100" style="height: 2px; background-color: #ccc;"></div>
-                </div>
-                <div class="container text-center justify-content-center">
-                    <div class="card w-25 mx-auto my-3">
-                        <img src="cdmf(1).jpeg" alt="image du trophée de la coupe du monde de football">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="text-center">JSV FOOT EURO 2024</h5>
-                        <p class="text-justify"> Rejoins-nous pour un spectacle excitant, où chaque passe, chaque tir,
-                            rend le match super
-                            amusant. Plonge dans l'action, où les équipes jouent pour la victoire. Dribbles malins, tirs
-                            précis et actions coordonnées créent une ambiance joyeuse sur le terrain. Viens vivre cette
-                            aventure rigolote où le football devient une grande fête</p>
-                    </div>
-                </div>
-
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo ECF.JPG" width="44" height="44" class="d-inline-block align-top mr-2 rounded-circle border border-white" alt="Logo JSV">
+            <div class="d-flex flex-column">
+              <span class="font-weight-bold brand-title">JSV</span>
+              <span class="brand-subtitle">Sport & Jeunesse</span>
             </div>
-            <div class="container text-center justify-content-center my-3">
-                <div class="w-100" style="height: 2px; background-color: #ccc;"></div>
-            </div>
-            <div class="container text-center justify-content-center">
-                <div class="card w-25 mx-auto my-3">
-                    <img src=" basquet event.jpeg" alt="image balle de basket dans arsceau"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html#a-propos">À propos</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="index.html#activites">Activités</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3 active" href="event.html">Événements</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown mx-lg-1">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-share-alt mr-1"></i>Réseaux
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter text-info mr-2"></i>Twitter</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
                 </div>
-                <div class="card-body">
-                    <h5 class="text-center"> NBA JSV, saison 2023-2024</h5>
-                    <p class="text-justify">Explorez l'effervescence du basketball compétitif, un spectacle où agilité
-                        et stratégie se mêlent
-                        dans une danse dynamique. Rejoignez-nous pour une compétition palpitante, où chaque rebond,
-                        chaque
-                        tir, compose une performance électrisante. Vivez l'intensité du jeu, où les équipes s'affrontent
-                        pour résoudre l'équation complexe de la victoire. Dribbles rythmés, tirs précis et passes
-                        orchestrées créent une chorégraphie sportive captivante.</p>
-                </div>
-            </div>
-            <div class="container text-center justify-content-center my-3">
-                <div class="w-100" style="height: 2px; background-color: #ccc;"></div>
-            </div>
-            <div class="container text-center justify-content-center">
-                <div class="card w-25 mx-auto my-3">
-                    <img src="championat equitaion event.jpeg"></img>
-                </div>
-                <div class="card-body">
-                    <h5 class="text-center">Championnat de JSV d'équitation 2024</h5>
-                    <p class="text-justify">Plongez dans l'univers envoûtant de l'équitation compétitive, une danse
-                        magistrale entre grâce et
-                        puissance. Joignez-vous à nous lors de cette compétition où la symbiose entre cavalier et
-                        monture
-                        crée une symphonie équestre inoubliable. Venez assister au défilé élégant, à des épreuves de
-                        saut
-                        défiant la gravité et à des mouvements de dressage d'une précision artistique. </p>
-                </div>
-            </div>
-
-
+              </li>
+              <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                <a class="btn btn-cta btn-sm rounded-pill px-3 shadow-sm" href="contact.html">Rejoindre le club</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+
+    <main>
+        <!-- En-tête de page -->
+        <section class="page-banner text-center text-white py-5">
+            <div class="container py-4 animate-on-scroll fade-in-down">
+                <span class="badge badge-accent mb-3 px-3 py-2 text-uppercase font-weight-bold">Calendrier Officiel</span>
+                <h1 class="display-4 font-weight-bold mb-3">Les Événements JSV</h1>
+                <p class="lead mx-auto text-white-50" style="max-width: 680px;">
+                    Participez à nos temps forts tout au long de l'année : tournois d'envergure, rencontres conviviales et célébration des exploits de nos jeunes sportifs !
+                </p>
+            </div>
+        </section>
+
+        <!-- Liste des événements -->
+        <section class="py-5 bg-light">
+            <div class="container py-3">
+                <div class="row">
+                    <!-- Événement 1 : Jeux Olympiques JSV -->
+                    <div class="col-lg-6 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up">
+                        <div class="card event-card h-100 w-100 shadow-sm border-0">
+                            <div class="event-img-wrapper position-relative">
+                                <img src="téléchargement.jpeg" class="card-img-top event-img" alt="Jeux Olympiques JSV 2024" />
+                                <div class="event-date-badge">
+                                    <span class="day font-weight-bold">24-26</span>
+                                    <span class="month text-uppercase">Août</span>
+                                </div>
+                                <span class="event-category-badge badge badge-primary">Multisports</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="event-meta mb-2 text-muted small d-flex flex-wrap align-items-center">
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt text-info mr-1"></i>Complexe Omnisports</span>
+                                    <span><i class="fas fa-users text-info mr-1"></i>Tout public</span>
+                                </div>
+                                <h4 class="card-title font-weight-bold mb-3">Jeux Olympiques de JSV 2024</h4>
+                                <p class="card-text text-muted mb-4 flex-grow-1">
+                                    Au cœur de cet événement, l'idéal olympique transcende les frontières, tissant des liens de paix et d'amitié entre des athlètes portant avec fierté les couleurs de leurs équipes. Une grande fête sportive réunissant toutes nos sections pour des moments inoubliables.
+                                </p>
+                                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                                    <span class="text-success font-weight-bold small"><i class="fas fa-check-circle mr-1"></i>Entrée libre</span>
+                                    <a href="contact.html?sujet=evenement-jo" class="btn btn-sport btn-sm">Participer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Événement 2 : Foot Euro JSV -->
+                    <div class="col-lg-6 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.15s;">
+                        <div class="card event-card h-100 w-100 shadow-sm border-0">
+                            <div class="event-img-wrapper position-relative">
+                                <img src="cdmf(1).jpeg" class="card-img-top event-img" alt="Trophée JSV Foot Euro 2024" />
+                                <div class="event-date-badge">
+                                    <span class="day font-weight-bold">06-08</span>
+                                    <span class="month text-uppercase">Juil</span>
+                                </div>
+                                <span class="event-category-badge badge badge-primary">Football</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="event-meta mb-2 text-muted small d-flex flex-wrap align-items-center">
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt text-info mr-1"></i>Stade Municipal synthétique</span>
+                                    <span><i class="fas fa-trophy text-warning mr-1"></i>Tournoi officiel</span>
+                                </div>
+                                <h4 class="card-title font-weight-bold mb-3">JSV FOOT EURO 2024</h4>
+                                <p class="card-text text-muted mb-4 flex-grow-1">
+                                    Rejoignez-nous pour un spectacle palpitant où chaque passe et chaque frappe enflamment les tribunes. Dribbles malins, esprit d'équipe exemplaire et coordination sur le terrain font de ce tournoi estival le rendez-vous incontournable des passionnés de football.
+                                </p>
+                                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                                    <span class="text-info font-weight-bold small"><i class="fas fa-clock mr-1"></i>09h - 19h</span>
+                                    <a href="contact.html?sujet=evenement-foot" class="btn btn-sport btn-sm">Inscrire une équipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Événement 3 : NBA JSV -->
+                    <div class="col-lg-6 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="card event-card h-100 w-100 shadow-sm border-0">
+                            <div class="event-img-wrapper position-relative">
+                                <img src="basquet event.jpeg" class="card-img-top event-img" alt="Ballon de basket dans l'arceau" />
+                                <div class="event-date-badge">
+                                    <span class="day font-weight-bold">18-20</span>
+                                    <span class="month text-uppercase">Mai</span>
+                                </div>
+                                <span class="event-category-badge badge badge-primary">Basket-ball</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="event-meta mb-2 text-muted small d-flex flex-wrap align-items-center">
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt text-info mr-1"></i>Gymnase Jean Jaurès</span>
+                                    <span><i class="fas fa-star text-warning mr-1"></i>All-Star Game</span>
+                                </div>
+                                <h4 class="card-title font-weight-bold mb-3">NBA JSV, Saison 2023-2024</h4>
+                                <p class="card-text text-muted mb-4 flex-grow-1">
+                                    Explorez l'effervescence du basketball compétitif où agilité, intensité et stratégie se rencontrent dans un spectacle de haut niveau. Concours de dunks, tirs à 3 points et finale du tournoi des collèges vous attendent !
+                                </p>
+                                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                                    <span class="text-success font-weight-bold small"><i class="fas fa-ticket-alt mr-1"></i>Buvette & Restauration</span>
+                                    <a href="contact.html?sujet=evenement-basket" class="btn btn-sport btn-sm">Réserver sa place</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Événement 4 : Équitation JSV -->
+                    <div class="col-lg-6 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.45s;">
+                        <div class="card event-card h-100 w-100 shadow-sm border-0">
+                            <div class="event-img-wrapper position-relative">
+                                <img src="championat equitaion event.jpeg" class="card-img-top event-img" alt="Cavalier et cheval au championnat d'équitation" />
+                                <div class="event-date-badge">
+                                    <span class="day font-weight-bold">14-15</span>
+                                    <span class="month text-uppercase">Sept</span>
+                                </div>
+                                <span class="event-category-badge badge badge-primary">Équitation</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="event-meta mb-2 text-muted small d-flex flex-wrap align-items-center">
+                                    <span class="mr-3"><i class="fas fa-map-marker-alt text-info mr-1"></i>Centre Équestre de la Vallée</span>
+                                    <span><i class="fas fa-horse text-primary mr-1"></i>Dressage & CSO</span>
+                                </div>
+                                <h4 class="card-title font-weight-bold mb-3">Championnat JSV d'Équitation 2024</h4>
+                                <p class="card-text text-muted mb-4 flex-grow-1">
+                                    Plongez dans l'univers captivant de l'équitation de compétition, harmonie parfaite entre grâce et puissance athlétique. Défilé d'élégance équestre, épreuves de saut d'obstacles défiant la gravité et baptêmes à poney pour les plus jeunes.
+                                </p>
+                                <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center">
+                                    <span class="text-info font-weight-bold small"><i class="fas fa-sun mr-1"></i>En plein air</span>
+                                    <a href="contact.html?sujet=evenement-equitation" class="btn btn-sport btn-sm">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action -->
+        <section class="cta-banner py-5 text-white text-center">
+            <div class="container py-3 animate-on-scroll fade-in-up">
+                <h3 class="display-5 font-weight-bold mb-3">Vous souhaitez proposer un événement ?</h3>
+                <p class="lead mb-4 mx-auto" style="max-width: 650px;">
+                    Bénévoles, clubs partenaires et associations : notre équipe vous accompagne pour monter de beaux projets sportifs municipaux.
+                </p>
+                <a href="contact.html" class="btn btn-light btn-lg font-weight-bold px-4 shadow">Contactez l'organisation</a>
+            </div>
+        </section>
     </main>
-    <footer class="text-center text-lg-start mt-4 shadow">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Jeunesse Sport avec sa Ville</h5>
-                    <p>
-                        Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le
-                        sport.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Liens</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="index.html" class="nav-link">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="#activité" class="nav-link">Activités</a>
-                        </li>
-                        <li>
-                            <a href="event.html" class="nav-link">Événements</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase font-weight-bold">Réseaux sociaux</h5>
-                    <ul class="list-unstyled mb-0 d-flex flex-column align-items-start">
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-facebook-f text-white bg-primary rounded-circle p-2 mr-2"></i>Facebook</a>
-                        </li>
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-twitter text-white bg-info rounded-circle p-2 mr-2"></i>Twitter</a>
-                        </li>
-                        <li><a class="nav-link d-flex align-items-center" href="#"><i
-                                    class="fab fa-instagram text-white bg-danger rounded-circle p-2 mr-2"></i>Instagram</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="text-center p-3"
-            style="background: rgba(0, 119, 182, 0.8); color: #fff; border-radius: 0 0 18px 18px;">
-            © 2025 Jeunesse Sport avec sa Ville
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j6f3e6tbh5g1f5p2NbS5"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
 
+    <!-- Footer -->
+    <footer class="site-footer shadow mt-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+            <div class="d-flex align-items-center mb-3">
+              <img src="logo ECF.JPG" width="40" height="40" class="rounded-circle mr-2 border border-white" alt="Logo JSV">
+              <h5 class="text-uppercase font-weight-bold mb-0 text-white">Jeunesse Sport avec sa Ville</h5>
+            </div>
+            <p class="footer-desc text-white-50 pr-lg-4">
+              Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le sport dans un cadre convivial et sécurisé.
+            </p>
+            <div class="footer-contact-item text-white-50 small mb-1">
+              <i class="fas fa-map-marker-alt mr-2 text-info"></i>Complexe Sportif Municipal, 75000 Ville
+            </div>
+            <div class="footer-contact-item text-white-50 small">
+              <i class="fas fa-envelope mr-2 text-info"></i>contact@jsv-sport.fr
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Navigation</h5>
+            <ul class="list-unstyled mb-0 footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Accueil</a></li>
+              <li><a href="index.html#a-propos" class="footer-link"><i class="fas fa-angle-right mr-2"></i>À propos</a></li>
+              <li><a href="index.html#activites" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Nos Activités</a></li>
+              <li><a href="event.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Événements</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Suivez l'aventure</h5>
+            <p class="text-white-50 small mb-3">Restez informés des tournois, stages et résultats du club sur nos réseaux sociaux.</p>
+            <div class="d-flex social-links">
+              <a class="social-icon facebook mr-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-icon twitter mr-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a class="social-icon instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <div class="container text-white-50 small d-flex flex-column flex-sm-row justify-content-between align-items-center">
+          <span>&copy; 2025 Jeunesse Sport avec sa Ville (JSV) - Tous droits réservés.</span>
+          <span class="mt-2 mt-sm-0">ECF COURS 01</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts Bootstrap bundle (inclut Popper) et animations -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animations JS -->
+    <script src="animations.js"></script>
+</body>
 </html>

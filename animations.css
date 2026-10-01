@@ -340,7 +340,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: #ff0080;
+    background: #00b4d8;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }

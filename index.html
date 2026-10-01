@@ -3,179 +3,396 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Jeunesse Sport avec sa Ville</title>
+    <meta name="description" content="Jeunesse Sport avec sa Ville (JSV) - Découvrez nos activités sportives et rejoignez notre communauté dynamique !">
+    <title>Jeunesse Sport avec sa Ville - Accueil</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Animations CSS -->
     <link rel="stylesheet" href="animations.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg shadow" style="background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%) !important; border-radius: 0 0 18px 18px;">
-      <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-        <img src="logo ECF.JPG" width="40" height="40" class="d-inline-block align-top mr-2 rounded-circle" alt="Logo JSV">
-        <span class="font-weight-bold h4 mb-0">JSV</span>
-      </a>
-      <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto align-items-center">
-          <li class="nav-item mx-1">
-            <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="index.html">Accueil</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="#activité">Activités</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="event.html">Événements</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link text-white font-weight-bold px-3 rounded-pill" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown mx-1">
-            <a class="nav-link dropdown-toggle text-white font-weight-bold px-3 rounded-pill" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-share-alt mr-1"></i>Réseaux
-            </a>
-            <div class="dropdown-menu dropdown-menu-right bg-light" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item d-flex align-items-center" href="#"><i class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
-              <a class="dropdown-item d-flex align-items-center" href="#"><i class="fab fa-twitter text-info mr-2"></i>Twitter</a>
-              <a class="dropdown-item d-flex align-items-center" href="#"><i class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
+    <!-- En-tête & Navigation -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo ECF.JPG" width="44" height="44" class="d-inline-block align-top mr-2 rounded-circle border border-white" alt="Logo JSV">
+            <div class="d-flex flex-column">
+              <span class="font-weight-bold brand-title">JSV</span>
+              <span class="brand-subtitle">Sport & Jeunesse</span>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <div class="image-accueil m-2 vh-90 d-flex align-items-center justify-content-center">
-    <img src="baniere accueil.JPG" class="img-fluid w-90 h-90 animate-on-scroll fade-in-up" style="object-fit: cover;"
-      alt="image de la page d'accueil" />
-    <div class="text-acceuil position-absolute w-25 text-white animate-on-scroll fade-in-down">
-      <h2 class="text-center">Bienvenue sur Jeunesse Sport avec sa Ville</h2>
-      <p class="lead text-center mt-4">Partagez votre passion, découvrez de nouvelles activités et vivez le sport autrement dans une ambiance conviviale et dynamique !</p>
-    </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Ouvrir la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3 active" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="#a-propos">À propos</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="#activites">Activités</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="event.html">Événements</a>
+              </li>
+              <li class="nav-item mx-lg-1">
+                <a class="nav-link px-3" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown mx-lg-1">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-share-alt mr-1"></i>Réseaux
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f text-primary mr-2"></i>Facebook</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter text-info mr-2"></i>Twitter</a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram text-danger mr-2"></i>Instagram</a>
+                </div>
+              </li>
+              <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                <a class="btn btn-cta btn-sm rounded-pill px-3 shadow-sm" href="contact.html">Rejoindre le club</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-  </div>
-  </div>
-  
-  <h1 class="text-center text-bold animate-on-scroll fade-in-down" id="activité">Qui sommes nous?</h1>
-      <div class="container text-center mb-4 animate-on-scroll fade-in-up">
-        Notre association valorise l'esprit d'équipe, le respect et le plaisir de progresser ensemble. Que vous soyez débutant ou sportif confirmé, vous trouverez chez nous un environnement mot[...]
-        Rejoignez-nous pour vivre le sport autrement, participer à des événements festifs et contribuer à la vie locale !
-      </div>
+    <main>
+      <!-- Hero Banner -->
+      <section class="hero-section position-relative d-flex align-items-center">
+        <div class="hero-background-wrapper">
+          <img src="baniere accueil.JPG" class="hero-bg-img" alt="Bannière d'accueil Jeunesse Sport avec sa Ville" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-md-10 text-white animate-on-scroll fade-in-up">
+              <span class="badge badge-accent mb-3 px-3 py-2 text-uppercase font-weight-bold">Saison 2025 - 2026</span>
+              <h1 class="hero-title display-4 font-weight-bold mb-3">Bienvenue sur Jeunesse Sport avec sa Ville</h1>
+              <p class="hero-lead lead mb-4">Partagez votre passion, découvrez de nouvelles activités et vivez le sport autrement dans une ambiance conviviale, dynamique et inclusive.</p>
+              <div class="hero-buttons d-flex flex-wrap">
+                <a href="#activites" class="btn btn-sport btn-lg mr-3 mb-2 shadow">
+                  <i class="fas fa-running mr-2"></i>Nos Activités
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg mb-2">
+                  <i class="fas fa-envelope mr-2"></i>Nous contacter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- À propos Section -->
+      <section class="about-section py-5 bg-white" id="a-propos">
+        <div class="container py-4">
+          <div class="text-center mb-5">
+            <span class="section-tag text-uppercase font-weight-bold">Notre Mission</span>
+            <h2 class="section-title text-center animate-on-scroll fade-in-down mt-2">Qui sommes-nous ?</h2>
+            <div class="title-bar mx-auto"></div>
+            <p class="section-subtitle mt-3 col-lg-8 mx-auto text-muted animate-on-scroll fade-in-up">
+              Notre association valorise l'esprit d'équipe, le respect et le plaisir de progresser ensemble. Que vous soyez débutant ou sportif confirmé, vous trouverez chez nous un environnement motivant, sécurisé et bienveillant.
+            </p>
+          </div>
+
+          <div class="row text-center mt-4">
+            <div class="col-md-4 mb-4 animate-on-scroll fade-in-up">
+              <div class="feature-box h-100 p-4 rounded-lg shadow-sm">
+                <div class="feature-icon-wrapper mb-3">
+                  <i class="fas fa-users fa-2x text-primary"></i>
+                </div>
+                <h4 class="font-weight-bold mb-2">Esprit d'équipe</h4>
+                <p class="text-muted mb-0">Partagez des moments forts et créez des liens solides autour de valeurs sportives et citoyennes.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-on-scroll fade-in-up" style="animation-delay: 0.15s;">
+              <div class="feature-box h-100 p-4 rounded-lg shadow-sm">
+                <div class="feature-icon-wrapper mb-3">
+                  <i class="fas fa-medal fa-2x text-primary"></i>
+                </div>
+                <h4 class="font-weight-bold mb-2">Dépassement de soi</h4>
+                <p class="text-muted mb-0">Développez vos aptitudes physiques et techniques grâce à un encadrement attentif et diplômé.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+              <div class="feature-box h-100 p-4 rounded-lg shadow-sm">
+                <div class="feature-icon-wrapper mb-3">
+                  <i class="fas fa-heart fa-2x text-primary"></i>
+                </div>
+                <h4 class="font-weight-bold mb-2">Accessibilité pour tous</h4>
+                <p class="text-muted mb-0">Des créneaux adaptés à tous les âges et tous les niveaux, pour faire du sport un plaisir quotidien.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-  <h1 class="text-center text-bold animate-on-scroll fade-in-down" id="activité">Nos activités</h1>
-  
-
-<section class="activité container-fluid py-5">
-    <div class="container">
-        <h2 class="section-title animate-on-scroll fade-in-down">Nos Activités Sportives</h2>
-        
-        <div class="row justify-content-center">
+      <!-- Activités Section -->
+      <section class="activites-section py-5" id="activites">
+        <div class="container py-4">
+          <div class="text-center mb-5">
+            <span class="section-tag text-uppercase font-weight-bold">Catalogue Sportif</span>
+            <h2 class="section-title text-center animate-on-scroll fade-in-down mt-2">Nos Activités Sportives</h2>
+            <div class="title-bar mx-auto"></div>
+            <p class="section-subtitle mt-3 col-lg-8 mx-auto text-muted animate-on-scroll fade-in-up">
+              Explorez nos différentes disciplines et trouvez celle qui vous correspond pour la nouvelle saison.
+            </p>
+          </div>
+          
+          <div class="row justify-content-center">
 
             <!-- Basket-ball -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
-                <div class="card">
-                    <img class="card-img-top" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Joueurs de basket-ball en match">
-                    <div class="card-body text-center">
-                        <i class="sport-icon fas fa-basketball-ball"></i>
-                        <h5 class="card-title">Basket-ball</h5>
-                        <p class="card-text">Rejoignez nos équipes pour des entraînements dynamiques, des tournois et des moments de partage. Ouvert à tous les niveaux, le basket favorise l'esp[...]</p>
-                        <button class="btn btn-sport">En savoir plus</button>
-                    </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up">
+              <div class="card sport-card h-100 w-100 shadow-sm border-0">
+                <div class="card-img-wrapper">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Joueurs de basket-ball en match">
+                  <span class="sport-badge">Collectif</span>
                 </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <div class="sport-icon-circle mb-3 mx-auto">
+                    <i class="sport-icon fas fa-basketball-ball"></i>
+                  </div>
+                  <h4 class="card-title font-weight-bold mb-2">Basket-ball</h4>
+                  <p class="card-text text-muted mb-3 flex-grow-1">Rejoignez nos équipes pour des entraînements dynamiques, des tournois et des moments de partage. Ouvert à tous les niveaux, le basket favorise l'esprit d'équipe, l'agilité et la coordination.</p>
+                  <button class="btn btn-sport btn-block mt-auto" data-toggle="modal" data-target="#modalBasket">
+                    <i class="fas fa-info-circle mr-1"></i>En savoir plus
+                  </button>
+                </div>
+              </div>
             </div>
 
             <!-- Football -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
-                <div class="card">
-                    <img class="card-img-top" src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Jeune footballeur en action">
-                    <div class="card-body text-center">
-                        <i class="sport-icon fas fa-futbol"></i>
-                        <h5 class="card-title">Football</h5>
-                        <p class="card-text">Venez dribbler, marquer et vous amuser lors de nos séances de football. Activité idéale pour se dépenser, apprendre le fair-play et développer se[...]</p>
-                        <button class="btn btn-sport">En savoir plus</button>
-                    </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.15s;">
+              <div class="card sport-card h-100 w-100 shadow-sm border-0">
+                <div class="card-img-wrapper">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jeune footballeur en action">
+                  <span class="sport-badge">Collectif</span>
                 </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <div class="sport-icon-circle mb-3 mx-auto">
+                    <i class="sport-icon fas fa-futbol"></i>
+                  </div>
+                  <h4 class="card-title font-weight-bold mb-2">Football</h4>
+                  <p class="card-text text-muted mb-3 flex-grow-1">Venez dribbler, marquer et progresser lors de nos séances de football. Activité idéale pour se dépenser, apprendre le fair-play et développer ses compétences tactiques.</p>
+                  <button class="btn btn-sport btn-block mt-auto" data-toggle="modal" data-target="#modalFoot">
+                    <i class="fas fa-info-circle mr-1"></i>En savoir plus
+                  </button>
+                </div>
+              </div>
             </div>
 
             <!-- Athlétisme -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
-                <div class="card">
-                    <img class="card-img-top" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Athlète en course sur piste">
-                    <div class="card-body text-center">
-                        <i class="sport-icon fas fa-running"></i>
-                        <h5 class="card-title">Athlétisme</h5>
-                        <p class="card-text">Course, saut, lancer… L'athlétisme permet à chacun de repousser ses limites et de découvrir de nouvelles disciplines dans une ambiance motivante [...]</p>
-                        <button class="btn btn-sport">En savoir plus</button>
-                    </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+              <div class="card sport-card h-100 w-100 shadow-sm border-0">
+                <div class="card-img-wrapper">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Athlète en course sur piste">
+                  <span class="sport-badge">Individuel</span>
                 </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <div class="sport-icon-circle mb-3 mx-auto">
+                    <i class="sport-icon fas fa-running"></i>
+                  </div>
+                  <h4 class="card-title font-weight-bold mb-2">Athlétisme</h4>
+                  <p class="card-text text-muted mb-3 flex-grow-1">Course, saut, lancer… L'athlétisme permet à chacun de repousser ses limites et de découvrir de nouvelles disciplines dans une ambiance motivante et stimulante.</p>
+                  <button class="btn btn-sport btn-block mt-auto" data-toggle="modal" data-target="#modalAthle">
+                    <i class="fas fa-info-circle mr-1"></i>En savoir plus
+                  </button>
+                </div>
+              </div>
             </div>
 
             <!-- Équitation -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 animate-on-scroll">
-                <div class="card">
-                    <img class="card-img-top" src="https://images.unsplash.com/photo-1584527164545-503cee07d5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cavalier et son cheval en prom[...]
-                    <div class="card-body text-center">
-                        <i class="sport-icon fas fa-horse"></i>
-                        <h5 class="card-title">Équitation</h5>
-                        <p class="card-text">Initiez-vous ou perfectionnez-vous à l'équitation avec nos partenaires locaux. Une activité qui allie respect de l'animal, maîtrise de soi et plai[...]</p>
-                        <button class="btn btn-sport">En savoir plus</button>
-                    </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 d-flex align-items-stretch animate-on-scroll fade-in-up" style="animation-delay: 0.45s;">
+              <div class="card sport-card h-100 w-100 shadow-sm border-0">
+                <div class="card-img-wrapper">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1584527164545-503cee07d5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cavalier et son cheval en promenade">
+                  <span class="sport-badge">Plein air</span>
                 </div>
+                <div class="card-body d-flex flex-column text-center">
+                  <div class="sport-icon-circle mb-3 mx-auto">
+                    <i class="sport-icon fas fa-horse"></i>
+                  </div>
+                  <h4 class="card-title font-weight-bold mb-2">Équitation</h4>
+                  <p class="card-text text-muted mb-3 flex-grow-1">Initiez-vous ou perfectionnez-vous à l'équitation avec nos partenaires locaux. Une activité qui allie respect de l'animal, maîtrise de soi et plaisir en pleine nature.</p>
+                  <button class="btn btn-sport btn-block mt-auto" data-toggle="modal" data-target="#modalEquitation">
+                    <i class="fas fa-info-circle mr-1"></i>En savoir plus
+                  </button>
+                </div>
+              </div>
             </div>
 
+          </div>
         </div>
-    </div>
-</section>
-  <footer class="text-center text-lg-start mt-4 shadow animate-on-scroll fade-in-up">
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase font-weight-bold">Jeunesse Sport avec sa Ville</h5>
-          <p>
-            Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le sport.
-          </p>
+      <!-- Bannière d'appel à l'action -->
+      <section class="cta-banner py-5 text-white text-center">
+        <div class="container py-3 animate-on-scroll fade-in-up">
+          <h3 class="display-5 font-weight-bold mb-3">Prêt à démarrer l'aventure avec JSV ?</h3>
+          <p class="lead mb-4 mx-auto" style="max-width: 650px;">Séances d'essai gratuites tout au long du mois de septembre. Venez tester nos disciplines sans engagement !</p>
+          <a href="contact.html" class="btn btn-light btn-lg font-weight-bold px-4 shadow">Inscrivez-vous maintenant</a>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase font-weight-bold">Liens</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="index.html" class="nav-link">Accueil</a></li>
-            <li><a href="#activité" class="nav-link">Activités</a></li>
-            <li><a href="event.html" class="nav-link">Événements</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase font-weight-bold">Réseaux sociaux</h5>
-          <ul class="list-unstyled mb-0 d-flex flex-column align-items-start">
-            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-facebook-f text-white bg-primary rounded-circle p-2 mr-2"></i>Facebook</a></li>
-            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-twitter text-white bg-info rounded-circle p-2 mr-2"></i>Twitter</a></li>
-            <li><a class="nav-link d-flex align-items-center" href="#"><i class="fab fa-instagram text-white bg-danger rounded-circle p-2 mr-2"></i>Instagram</a></li>
-          </ul>
+      </section>
+    </main>
+
+    <!-- Modals Détails Activités -->
+    <div class="modal fade" id="modalBasket" tabindex="-1" role="dialog" aria-labelledby="modalBasketTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title font-weight-bold" id="modalBasketTitle"><i class="fas fa-basketball-ball mr-2"></i>Basket-ball - JSV</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Public :</strong> Enfants (dès 7 ans), ados et adultes.</p>
+            <p><strong>Créneaux :</strong> Mercredi (14h-17h) et Samedi (10h-12h).</p>
+            <p><strong>Lieu :</strong> Gymnase Municipal Jean Jaurès.</p>
+            <p><strong>Équipement requis :</strong> Tenue de sport en salle, chaussures de basket propres, gourde.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <a href="contact.html" class="btn btn-sport">Réserver un essai</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="text-center p-3" style="background: rgba(0, 119, 182, 0.8); color: #fff; border-radius: 0 0 18px 18px;">
-      © 2025 Jeunesse Sport avec sa Ville
+
+    <div class="modal fade" id="modalFoot" tabindex="-1" role="dialog" aria-labelledby="modalFootTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title font-weight-bold" id="modalFootTitle"><i class="fas fa-futbol mr-2"></i>Football - JSV</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Public :</strong> U9 à Séniors, sections féminines et masculines.</p>
+            <p><strong>Créneaux :</strong> Mardi et Jeudi (18h-20h), matchs le weekend.</p>
+            <p><strong>Lieu :</strong> Stade Municipal synthétique.</p>
+            <p><strong>Équipement requis :</strong> Protège-tibias obligatoires, crampons moulés adaptés.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <a href="contact.html" class="btn btn-sport">Réserver un essai</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j6f3e6tbh5g1f5p2NbS5"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- Animations JS -->
-  <script src="animations.js"></script>
+
+    <div class="modal fade" id="modalAthle" tabindex="-1" role="dialog" aria-labelledby="modalAthleTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title font-weight-bold" id="modalAthleTitle"><i class="fas fa-running mr-2"></i>Athlétisme - JSV</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Public :</strong> Tous niveaux dès 6 ans (école d'athlétisme jusqu'aux masters).</p>
+            <p><strong>Créneaux :</strong> Lundi, Mercredi et Vendredi (18h-19h30).</p>
+            <p><strong>Lieu :</strong> Piste d'athlétisme du complexe omnisports.</p>
+            <p><strong>Disciplines :</strong> Demi-fond, sprint, saut en longueur, lancer et cross.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <a href="contact.html" class="btn btn-sport">Réserver un essai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEquitation" tabindex="-1" role="dialog" aria-labelledby="modalEquitationTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title font-weight-bold" id="modalEquitationTitle"><i class="fas fa-horse mr-2"></i>Équitation - JSV</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Fermer">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Public :</strong> Poney club dès 5 ans, cours ados et adultes tous niveaux.</p>
+            <p><strong>Créneaux :</strong> Mercredi et Samedi après-midi sur réservation.</p>
+            <p><strong>Lieu :</strong> Centre Équestre partenaire de la Vallée.</p>
+            <p><strong>Inclus :</strong> Casque de sécurité fourni pour les séances d'initiation.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <a href="contact.html" class="btn btn-sport">Réserver un essai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer shadow mt-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+            <div class="d-flex align-items-center mb-3">
+              <img src="logo ECF.JPG" width="40" height="40" class="rounded-circle mr-2 border border-white" alt="Logo JSV">
+              <h5 class="text-uppercase font-weight-bold mb-0 text-white">Jeunesse Sport avec sa Ville</h5>
+            </div>
+            <p class="footer-desc text-white-50 pr-lg-4">
+              Rejoignez-nous pour repousser vos limites, célébrer les succès et partager votre passion pour le sport dans un cadre convivial et sécurisé.
+            </p>
+            <div class="footer-contact-item text-white-50 small mb-1">
+              <i class="fas fa-map-marker-alt mr-2 text-info"></i>Complexe Sportif Municipal, 75000 Ville
+            </div>
+            <div class="footer-contact-item text-white-50 small">
+              <i class="fas fa-envelope mr-2 text-info"></i>contact@jsv-sport.fr
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Navigation</h5>
+            <ul class="list-unstyled mb-0 footer-links">
+              <li><a href="index.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Accueil</a></li>
+              <li><a href="#a-propos" class="footer-link"><i class="fas fa-angle-right mr-2"></i>À propos</a></li>
+              <li><a href="#activites" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Nos Activités</a></li>
+              <li><a href="event.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Événements</a></li>
+              <li><a href="contact.html" class="footer-link"><i class="fas fa-angle-right mr-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase font-weight-bold text-white mb-3 footer-heading">Suivez l'aventure</h5>
+            <p class="text-white-50 small mb-3">Restez informés des tournois, stages et résultats du club sur nos réseaux sociaux.</p>
+            <div class="d-flex social-links">
+              <a class="social-icon facebook mr-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-icon twitter mr-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a class="social-icon instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <div class="container text-white-50 small d-flex flex-column flex-sm-row justify-content-between align-items-center">
+          <span>&copy; 2025 Jeunesse Sport avec sa Ville (JSV) - Tous droits réservés.</span>
+          <span class="mt-2 mt-sm-0">ECF COURS 01</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts Bootstrap bundle (inclut Popper) et animations -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animations JS -->
+    <script src="animations.js"></script>
   </body>
 </html>
